@@ -36,16 +36,36 @@ class Batalla {
     let indexTeam1 = 0;
     let indexTeam2 = 0;
 
-    let pokemon1 = this.team1[indexTeam1];
-    let pokemon2 = this.team2[indexTeam2];
+    while (indexTeam1 < this.team1.length && indexTeam2 < this.team2.length) {
+      let pokemon1 = this.team1[indexTeam1];
+      let pokemon2 = this.team2[indexTeam2];
 
-    this.atacarHastaDerrotar(pokemon1,pokemon2);
+      let survivor = this.atacarHastaDerrotar(pokemon1, pokemon2);
+      if (survivor === pokemon1) {
+        indexTeam2++;
+      } else {
+        indexTeam1++;
+      }
+    }
+    if (indexTeam1 > indexTeam2) {
+      console.log("Team Win 2");
+    } else {
+      console.log("Team Win 1");
+    }
+    console.log("Equipo 1:", this.team1);
+    console.log("Equipo 2:", this.team2);
   }
 
   atacarHastaDerrotar(pokemon1, pokemon2) {
     while (pokemon1.hp > 0 && pokemon2.hp > 0) {
       pokemon1.attack(pokemon2);
       pokemon2.attack(pokemon1);
+    }
+    if (pokemon1.hp > 0) {
+      console.log("Survivor: ", pokemon1.name);
+      return pokemon1;
+    } else {
+      return pokemon2;
     }
   }
 }

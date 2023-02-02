@@ -12,6 +12,8 @@
  * 7- While =>
  */
 
+
+
 let sum = 0;
 for(let i = 1; i <= 4; i++) { 
     sum = sum + i; 
@@ -67,4 +69,29 @@ function scream(n) {
     }
     return scream;
 }
+
+
+
+const autos = ["auto1", "auto2", "auto3"];
+
+//Retornamos cada elemento del array con un ciclo for
+for(let i = 0; i < autos.length; i++){
+  console.log(autos[i]);
+}
+
+//Otra forma mas actualizada de escribir lo mismo con menos codigo =>
+for (const nuevaForma of autos) {
+  console.log(nuevaForma)
+}
+
+//Funcion que retorna el 2ble de cada valor del array =>
+const doubleNumberArray = (numeros) => {
+  let doble = [];
+  for(const numero of numeros){
+    doble.push(numero*2); //Pusheamos el 2ble de cada valor a un array
+  }
+  return doble;
+}
+console.log(doubleNumberArray([2,5,10,15,20]));
+
 

@@ -5,17 +5,35 @@ const booleans = [true, false, true, true];
 const strings = ["happy", "go", "lucky"];
 
 
-// De igual forma podemos almacenar arrays dentro de otros arrays
+//Array dentro de un Array
 const nested = [[1, 2, [1, 2]], 2];
 console.log(nested[0]);
 
 
-// Indexación de arrays =>
+// Indexación de Arrays =>
 const arr = ['h','a','p','p','y'];
 for(let i = 0; i < arr.length; i++) { //Imprimimos letra por letra del array
     console.log(arr[i]);
 }
 console.log(arr.length); //Tambien podemos utilizar el metodo .length para los arrays.
+
+
+
+// Arrays =>
+const frutas = ["pera", "manzana", "anana"];
+console.log(frutas[0])//obtener el elemento 1 de la lista
+
+frutas.push("banana");//Agregar elemento al final de nuestro array
+console.log(frutas);//["pera", "manzana", "anana", "banana"];
+
+console.log(frutas.slice(0,2))//Obtenemos 2 elementos de nuestro array
+
+console.log(frutas.indexOf('pera'))//Consultar indice de elemento
+
+console.log(frutas.length)//longitud total de nuestro array 
+
+
+//Trabajando con Arrays => => => => => => => =>
 
 
 //Completa la función hasOne que toma una matriz de números.
