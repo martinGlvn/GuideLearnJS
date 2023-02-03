@@ -76,3 +76,60 @@ console.log(random100Y500);
 const mathFloorA = Math.floor(10.25);
 console.log(mathFloorA);
 
+
+
+//Functions =>
+
+//Funcion Jugo de frutas ------>
+function jugoDeFrutas(manzanas,naranjas){
+    const jugo = `Este jugo contiene ${manzanas} manzanas y ${naranjas} naranjas`;
+    return jugo
+}
+const retornarJugo = jugoDeFrutas(50,25);
+console.log(retornarJugo);
+
+
+/*                   Functiones = Declaradas y Expresivas  
+ * "Cual es la diferencia entre ambas?" La verdad es que ambas funciones cumplen
+ * con el mismo objetivo a pesar de que las funcion expresiva se almacena en una 
+ * variable, pero la principal diferencia es que una funcion declarada se puede
+ * realizar su llamado antes de ser inicializada en el codigo
+ */
+
+//Function Declarada
+const edad = calcularEdad1(2001);
+
+function calcularEdad1(nacimiento){
+    return 2023 - nacimiento;
+}
+
+//Function Expresiva =>
+const calcularEdad2 = function (nacimiento){
+    return 2023 - nacimiento;
+}
+const edad2 = calcularEdad2(2001);
+
+
+// Arrow Functions =>
+const edadJubilatoria = (nacimiento,name) =>{
+    const edad = 2023 - nacimiento;
+    const jubilacion = 65 - edad;
+    return `${name} se jubilara en ${jubilacion}`;
+}
+console.log(edadJubilatoria(2001,"Martin"));
+
+
+//Functions Calling Other Functions => Llamada de una funcion dentro de una funcion
+const cortarFrutas = function (fruta){
+    return fruta * 4
+}
+const procesarFrutas = function (pera, banana){
+    const piezasPera = cortarFrutas(pera);
+    const piezasBanana = cortarFrutas(banana);
+
+    const jugos = `${piezasPera},${piezasBanana}`
+    return jugos;
+}
+console.log(procesarFrutas(5,10));
+
+// 1 hora seccion 2
