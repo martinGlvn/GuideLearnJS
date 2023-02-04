@@ -8,13 +8,6 @@
  * 5- Function que divide 2 parametros de entrada.
  * 6- variable que almacena una division.
  * 
- * 7- Metodo "Math Random" devuelve un numero random entre 0 y 1 sin incluir el 1. 
- * 8- Function que retorna un numero random
- * 9- Generar numero aleatorio entre 0 y 100.
- * 10- Generar numero aleatorio entre 10 y 20.
- * 
- * 11- Metodo "Math floor" devuelve el entero de un numero decimal.
- * 
  */
 
 function getNumber() {
@@ -46,8 +39,70 @@ function split(f, g){
 console.log(split(50, 10));
 
 
-const div = (10+20+30) / 3;
-console.log(div);
+//Funcion Jugo de frutas ------>
+function jugoDeFrutas(manzanas,naranjas){
+    const jugo = `Este jugo contiene ${manzanas} manzanas y ${naranjas} naranjas`;
+    return jugo
+}
+const retornarJugo = jugoDeFrutas(50,25);
+console.log(retornarJugo);
+
+
+/*-------------------Functiones = Declaradas y Expresivas-------------------
+ * "Cual es la diferencia entre ambas?" La verdad es que ambas funciones cumplen
+ * con el mismo objetivo a pesar de que las funcion expresiva se almacena en una 
+ * variable, pero la principal diferencia es que una funcion declarada se puede
+ * realizar su llamado antes de ser inicializada en el codigo
+ */
+
+//Function Declarada
+const edad = calcularEdad1(2001);
+
+function calcularEdad1(nacimiento){
+    return 2023 - nacimiento;
+}
+
+
+//Function Expresiva =>
+const calcularEdad2 = function (nacimiento){
+    return 2023 - nacimiento;
+}
+const edad2 = calcularEdad2(2001);
+
+
+// Arrow Functions =>
+const edadJubilatoria = (nacimiento,name) =>{
+    const edad = 2023 - nacimiento;
+    const jubilacion = 65 - edad;
+    return `${name} se jubilara en ${jubilacion}`;
+}
+console.log(edadJubilatoria(2001,"Martin"));
+
+
+
+//Functions Calling Other Functions => Llamada de una funcion dentro de una funcion
+const cortarFrutas = function (fruta){
+    return fruta * 4
+}
+const procesarFrutas = function (pera, banana){
+    const piezasPera = cortarFrutas(pera);
+    const piezasBanana = cortarFrutas(banana);
+
+    const jugos = `${piezasPera},${piezasBanana}`
+    return jugos;
+}
+console.log(procesarFrutas(5,10));
+
+
+
+/*
+* 7- Metodo "Math Random" devuelve un numero random entre 0 y 1 sin incluir el 1. 
+* 8- Function que retorna un numero random
+* 9- Generar numero aleatorio entre 0 y 100.
+* 10- Generar numero aleatorio entre 10 y 20.
+* 
+* 11- Metodo "Math floor" devuelve el entero de un numero decimal.
+*/
 
 
 const randomNumber = Math.random();
@@ -78,58 +133,33 @@ console.log(mathFloorA);
 
 
 
-//Functions =>
 
-//Funcion Jugo de frutas ------>
-function jugoDeFrutas(manzanas,naranjas){
-    const jugo = `Este jugo contiene ${manzanas} manzanas y ${naranjas} naranjas`;
-    return jugo
+/*-------> Coding Challenge 1-
+¡Volvamos a los dos equipos de gimnasia, los delfines y los koalas! Hay una nueva disciplina de gimnasia,
+que funciona de manera diferente. Cada equipo compite 3 veces y luego se calcula el promedio de los 3 puntajes
+(es decir, un puntaje promedio por equipo). Un equipo SÓLO gana si tiene al menos el DOBLE de la puntuación media
+del otro equipo. De lo contrario, ¡ningún equipo gana!
+
+1. Cree una función de flecha 'calcAverage' para calcular el promedio de 3 puntajes
+2. Usa la función para calcular el promedio de ambos equipos
+3. Crear una función 'checkWinner' que tome como parámetros la puntuación media de cada equipo
+('avgDolhins' y 'avgKoalas'), y luego registra el ganador en la consola, junto con los puntos de victoria, de acuerdo con la regla anterior. Ejemplo: "Koalas ganan (30 vs. 13)".
+4. Utilice la función 'checkWinner' para determinar el ganador de DATA 1 y DATA 2. 5. Ignore los sorteos esta vez.
+*/
+
+
+const calcAverage = (a,b,c) =>{
+    const promedio = (a + b + c) / 3;
+    return promedio;
 }
-const retornarJugo = jugoDeFrutas(50,25);
-console.log(retornarJugo);
+console.log(calcAverage(10,15,20));
+const puntuaciónAvgDolhinsy = calcAverage(10,5,15);
+const puntuacionAvgKoalas = calcAverage(5,25,20);
 
-
-/*                   Functiones = Declaradas y Expresivas  
- * "Cual es la diferencia entre ambas?" La verdad es que ambas funciones cumplen
- * con el mismo objetivo a pesar de que las funcion expresiva se almacena en una 
- * variable, pero la principal diferencia es que una funcion declarada se puede
- * realizar su llamado antes de ser inicializada en el codigo
- */
-
-//Function Declarada
-const edad = calcularEdad1(2001);
-
-function calcularEdad1(nacimiento){
-    return 2023 - nacimiento;
+const checkWinner = (avgDolhinsy, avgKoalas) =>{
+    // if(){}else if{}else{}
 }
 
-//Function Expresiva =>
-const calcularEdad2 = function (nacimiento){
-    return 2023 - nacimiento;
-}
-const edad2 = calcularEdad2(2001);
 
 
-// Arrow Functions =>
-const edadJubilatoria = (nacimiento,name) =>{
-    const edad = 2023 - nacimiento;
-    const jubilacion = 65 - edad;
-    return `${name} se jubilara en ${jubilacion}`;
-}
-console.log(edadJubilatoria(2001,"Martin"));
 
-
-//Functions Calling Other Functions => Llamada de una funcion dentro de una funcion
-const cortarFrutas = function (fruta){
-    return fruta * 4
-}
-const procesarFrutas = function (pera, banana){
-    const piezasPera = cortarFrutas(pera);
-    const piezasBanana = cortarFrutas(banana);
-
-    const jugos = `${piezasPera},${piezasBanana}`
-    return jugos;
-}
-console.log(procesarFrutas(5,10));
-
-// 1 hora seccion 2
