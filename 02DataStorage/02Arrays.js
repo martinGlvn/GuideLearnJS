@@ -1,30 +1,44 @@
-// En Js cuando queremos almacenar diversos elementos utilizamos 
-// un array o tambien llamada matriz, 
+/*
+    En Js cuando queremos almacenar diversos elementos utilizamos 
+    un array o tambien llamada matriz,
+*/
+
 const numbers = [1, 2, 3, 4, 5];
 const booleans = [true, false, true, true];
 const strings = ["happy", "go", "lucky"];
 
-
 //Array dentro de un Array
 const nested = [[1, 2, [1, 2]], 2];
 console.log(nested[0]);
-
 
 // Indexación de Arrays =>
 const arr = ['h','a','p','p','y'];
 for(let i = 0; i < arr.length; i++) { //Imprimimos letra por letra del array
     console.log(arr[i]);
 }
-console.log(arr.length); //Tambien podemos utilizar el metodo .length para los arrays.
+console.log(arr);
 
 
 
-// Arrays =>
-const frutas = ["pera", "manzana", "anana"];
-console.log(frutas[0])//obtener el elemento 1 de la lista
+
+/* Metodos Utilizados para trabajar con los arrays => 
+    .push && .unshift => Agregar elementos al final o al comienzo de nuestro array.
+    .slice  => Obtenemos elementos de un indice a otro "(0, 3)"
+    .indexOf => Consultamos un indice especifico de nuestro array.
+    .length => obtenemos la longitud completa de nuestro array.
+    .pop => Remover un elemento de nuestro array.
+    .shift => Remover el primer elemento de nuestro array.
+    .includes => Nos ayuda a corroborar si un elemento se encuentra en nuestro array TRUE or FALSE
+*/
+
+const frutas = ["pera", "manzana", "anana"]; //obtener el elemento 1 de la lista
+console.log(frutas[0])
 
 frutas.push("banana");//Agregar elemento al final de nuestro array
 console.log(frutas);//["pera", "manzana", "anana", "banana"];
+
+frutas.unshift("frutilla");//Agregar elemento al comienzo de nuestro array
+console.log(frutas)//["frutilla", "pera", "manzana", "anana", "banana"];
 
 console.log(frutas.slice(0,2))//Obtenemos 2 elementos de nuestro array
 
@@ -32,8 +46,24 @@ console.log(frutas.indexOf('pera'))//Consultar indice de elemento
 
 console.log(frutas.length)//longitud total de nuestro array 
 
+console.log(frutas.pop(2))//Eliminar elemento de nuestro array
+console.log(frutas)
 
-//Trabajando con Arrays => => => => => => => =>
+const array2 = [1,2,3]; //Modificar valores de un array
+array2[0] = 5;
+console.log(array2); // [5,2,3]
+
+console.log(array2.shift()); //[2,3]
+
+console.log(array2.includes(2)); // Verificamos si el elemento 2 pertenece en nuestro array => FALSE
+
+
+
+
+
+
+
+//Ejercicios Basicos con arrays.
 
 
 //Completa la función hasOne que toma una matriz de números.
@@ -67,7 +97,6 @@ function average(array) {
 console.log(average([1,5,20]));
 
 
-
 //Dada una matriz, encuentre el suma de todo incluso valores dentro de la matriz y devolverla.
 function sumEven(array) {
     let totalPar = 0;
@@ -79,7 +108,6 @@ function sumEven(array) {
     return totalPar;
 }
 console.log(sumEven([5,14,10]));
-
 
 
 //Filtramos elementos de una matriz < 5   "Utilizando METODO PUSH"
@@ -96,13 +124,11 @@ function greaterThanFive(array) {
 console.log(greaterThanFive([10,3,5,60,25])); //Rta => [10,60,25]
 
 
-
 // Si el array contiene el elemento 5 retorna 5
 const element = 5;
 const array = [1,2,3];
 const isContained = array.indexOf(element) >= 0;
 console.log(isContained);
-
 
 
 //Escriba una función que tome una matriz de números y
@@ -120,14 +146,6 @@ function unique(array) {
 console.log([5, 5, 10]);
 
 
-
-//Modificar valores de un array
-const array2 = [1,2,3];
-array2[0] = 5;
-console.log(array2); // [5,2,3]
-
-
-
 //Completa el addOne función para agregar 1 a cada elemento dentro de la matriz.
 //Como estamos modificando la matriz directamente no lo devuelvas.
 function addOne(array) {
@@ -135,7 +153,6 @@ function addOne(array) {
         array[i]++
     }
 }
-
 
 
 //Eliminar elementos de un array menores a 5  => .Splice
@@ -146,7 +163,6 @@ function greaterThanFive(array) {
         }
     }   
 }
-
 
 
 // Dado un array de enteros y un número, num, encuentre todas las ocurrencias
