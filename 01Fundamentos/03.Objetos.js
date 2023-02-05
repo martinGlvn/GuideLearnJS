@@ -28,3 +28,14 @@ const introducir = (nombre, color) => {
 
 console.log(imprimirInfo())
 console.log(introducir("Mercedes Benz", "Rojo"));
+
+
+//Preguntaremos al usario que es lo que desea saber del objeto.
+const martin ={
+  name : "martin",
+  job : "dev",
+  age : 25
+}
+const interes = prompt('¿Que deseas saber de martin name, job o age?');
+console.log(martin[interes])
+

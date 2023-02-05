@@ -177,3 +177,31 @@ function removeOccurrences(array, num) {
 }
 
 
+
+/*
+Steven todavía está construyendo su calculadora de propinas, usando las mismas
+reglas que antes: dé una propina del 15 % de la factura si el valor de la factura
+está entre 50 y 300, y si el valor es diferente, la propina es del 20 %.
+
+1. Escriba una función 'calcTip' que tome cualquier valor de factura como entrada y devuelva
+la propina correspondiente, calculada según las reglas anteriores (puede consultar el código del
+desafío de la calculadora de la primera propina si lo necesita). Utilice el tipo de función que más le guste.
+Pruebe la función utilizando un valor de factura de 100.
+
+2. ¡Y ahora usemos arreglos! Así que cree una matriz 'facturas' que contenga los datos de prueba a continuación.
+
+3. Cree una matriz de 'propinas' que contenga el valor de la propina para cada factura, calculado a partir de la función que creó anteriormente.
+
+4. BONO: Cree una matriz 'total' que contenga los valores totales, por lo que la factura + la propina.
+*/
+
+function calcTip(montoFactura){
+    return montoFactura >= 50 && montoFactura <= 300 
+        ? montoFactura * 0.15 
+        : montoFactura * 0.2;
+}
+console.log(calcTip(500));
+
+const facturas = [];
+const propinas = [];
+const total = [];
