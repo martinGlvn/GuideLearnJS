@@ -7,7 +7,6 @@
  * 6- Varibles Mutables => ("let") & Inmutables => ("const")
  */
 
-
 const a = 3;
 
 const b = "Martin";
@@ -22,8 +21,7 @@ const g = "Martin";
 const h = `mi nombre es ${g}`;
 console.log(h);
 
-const i = "variable inmutable"
+const i = "variable inmutable";
 let j = "variable mutable";
 j = "esta variable es mutable";
 console.log(j);
-

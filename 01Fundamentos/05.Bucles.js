@@ -68,9 +68,6 @@ for (let i = 0; i < autos.length; i++) {
   console.log(autos[i]);
 }
 
-
-
-
 //Otra forma mas actualizada de escribir lo mismo con menos codigo =>
 for (const nuevaForma of autos) {
   console.log(nuevaForma);
@@ -87,10 +84,10 @@ const doubleNumberArray = (numeros) => {
 console.log(doubleNumberArray([2, 5, 10, 15, 20]));
 
 //Funcion que cuenta cada letra en la funcion y la retorna
-const cuantasLetras = () =>{
-    const frase = "hola mi nombre es martin, que tal?";
-    for(const letras of frase){
-      console.log(letras)
-    }
-}
+const cuantasLetras = () => {
+  const frase = "hola mi nombre es martin, que tal?";
+  for (const letras of frase) {
+    console.log(letras);
+  }
+};
 cuantasLetras();
