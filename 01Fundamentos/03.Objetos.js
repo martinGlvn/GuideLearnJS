@@ -1,4 +1,4 @@
-//Objetos => Normalmente gracias a los objetos podemos representar cosas
+//Objetos literales => Normalmente gracias a los objetos podemos representar cosas
 //mediante codigo como por ejemplo personas, autos, animales, etc.
 
 const persona = {
@@ -19,15 +19,35 @@ console.log(persona["dni"]); //'42.432.4.234242'
 //Imprimir objeto con sus propiedades y valores
 console.log(persona); // {name:"Martin",lastName:"Galván",pais:Argentina}
 
-//Objeto + Funcionalidades
+//Objeto + Funcionalidades && Metodos
 const introducir = (nombre, color) => {
   const auto = ((nombre = nombre), (color = color));
-  const imprimirInfo = `El modelo del auto es ${auto.nombre} y su color 
-    es ${auto.color}`;
+  const imprimirInfo = `El modelo del auto es ${nombre} y su color 
+    es ${color}`;
+  return imprimirInfo;
 };
 
-console.log(imprimirInfo());
 console.log(introducir("Mercedes Benz", "Rojo"));
+
+// funcionalidad en objeto.
+const gato = {
+  nombre: "MISHISHI",
+  comerDos() {
+    console.log("gato comiendo dos");
+  },
+};
+
+// Objeto THIS => hace referencia al objeto en el cual nos encontramos
+const perro = {
+  nombre: "juan",
+  favFood: "Pollo",
+  dog() {
+    console.log(
+      `este perro llamado ${this.nombre} le gusta mucho el ${this.favFood}`
+    );
+  },
+};
+console.log(perro.dog());
 
 //Preguntaremos al usario que es lo que desea saber del objeto.
 const martin = {

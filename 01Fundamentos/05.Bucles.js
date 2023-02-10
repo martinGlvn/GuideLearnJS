@@ -91,3 +91,13 @@ const cuantasLetras = () => {
   }
 };
 cuantasLetras();
+
+// FOR EACH => ... con for each hacemos exactamente lo mismo que con for of
+let frutas = ["manzana", "pera", "uva"];
+frutas.forEach((fruta) => console.log(fruta));
+
+//Tambien podremos imprimir su indice y el array completo.
+frutas.forEach((fruta, index, array) => {
+  console.log(`${index}: ${fruta}`);
+  console.log(array);
+});
