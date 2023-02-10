@@ -47,3 +47,19 @@ function maxSum(num) {
   return sum;
 }
 console.log(maxSum(6));
+
+// Carrito de Compras => Crea un carrito de compras utilizando prompt
+const compras = [];
+const compra = prompt("Supermercado ¿Que desea Comprar?");
+
+compras.push(fruta);
+
+while (confirm("¿Desea seguir comprando?")) {
+  const compra = prompt("¿Que desea comprar?");
+  compras.push(fruta);
+}
+
+console.log("Compraste");
+for (compra of compras) {
+  console.log(fruta);
+}

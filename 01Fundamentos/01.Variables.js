@@ -25,3 +25,28 @@ const i = "variable inmutable";
 let j = "variable mutable";
 j = "esta variable es mutable";
 console.log(j);
+
+// Template String
+let myName = "Martin";
+console.log(`hola como andas ${myName}`);
+
+/*  Diferencia entre let && const && var.
+    "var" => es una variable global que no respeta el scope y sobreescribe variables
+    en cambio "let" => si respeta el scope y hace referencia a la funcion en el q se encuentra.
+    "const" => nos permite almacenar datos que no podran ser modificados.
+*/
+var z1 = "hola";
+var z2 = "chau";
+
+for (let i = 0; i < 19; i++) {
+  console.log("nuestra variable i respeta el scope de for()");
+}
+
+const z3 = "noPuedoSerModificado";
+z3 = "noPuedoModificar";
+console.log(z3); //Error de asignacion no puede ser modificado
+
+//Si podemos modificar el valor de un array que este en "const"
+const array = [];
+array[0] = "martin";
+console.log(array); // ["martin"]
