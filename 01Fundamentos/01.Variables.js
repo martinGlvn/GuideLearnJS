@@ -24,6 +24,7 @@ console.log(h);
 const i = "variable inmutable";
 let j = "variable mutable";
 j = "esta variable es mutable";
+
 console.log(j);
 
 // Template String
