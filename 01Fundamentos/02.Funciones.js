@@ -83,6 +83,24 @@ const procesarFrutas = function (pera, banana) {
 };
 console.log(procesarFrutas(5, 10));
 
+// Arrow Function vs Regular Functions =>
+const jonas = {
+  year: 1990,
+  firstName: "Martin",
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+  greet: function () {
+    `Hey ${this.firstName}`;
+  },
+};
+// En este caso no   me podria retornar la funcion ya que estamos utilizando el objeto this en
+// una funcion flecha que se define con una variable delante es decir no contiene el metodo this.
+
+console.log(jonas.greet());
+// La forma correcta seria agregar function detras de greet
+
 /*
  * 7- Metodo "Math Random" devuelve un numero random entre 0 y 1 sin incluir el 1.
  * 8- Function que retorna un numero random
