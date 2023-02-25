@@ -12,3 +12,5 @@ console.log(rest2); //10
 const solucion = 0;
 const w = solucion ?? 10;
 console.log(w); //0
+
+// Valores falsos por defecto "Undefined", "0", " ", ' '
