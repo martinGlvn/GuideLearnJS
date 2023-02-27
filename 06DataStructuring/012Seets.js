@@ -7,7 +7,7 @@ for (const it of autos) {
   console.log(it); //audi porsche
 }
 
-//
+// Verificamos si el set contiene este elemento
 console.log(autos.has("audi")); // true
 
 // Eliminamos un elemento
