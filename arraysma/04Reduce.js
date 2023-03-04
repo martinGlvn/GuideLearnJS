@@ -26,6 +26,14 @@ Salida Esperada =
        100  :   3
     }
 */
-const numeros2 = [100, 10, 50, 10, 42, 100, 100];
+const items = [100, 10, 50, 10, 42, 100, 100];
 
-numeros2.reduce;
+const rta = items.reduce((obj, item) => {
+  if (!obj[item]) {
+    obj[item] = 1;
+  } else {
+    obj[item] = obj[item] + 1;
+  }
+  return obj;
+}, {});
+console.log(rta);
