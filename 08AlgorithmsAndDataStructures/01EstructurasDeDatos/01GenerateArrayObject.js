@@ -35,4 +35,4 @@ class MyArray {
 
 // Instanciando nuestra clase
 const myArray = new MyArray();
-console.log(myArray);
+console.log(myArray); // MyArray { length: 0, data: {} }
