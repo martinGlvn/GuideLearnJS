@@ -31,8 +31,37 @@ class MyArray {
     this.length++;
     return this.data;
   }
+  //mi metodo pop => Elimino el ultimo elemento de mi array
+  pop() {
+    const ultimoItem = this.data[this.length - 1]; // Almacenamos el ultimo elemento
+    delete this.data[this.length - 1]; // Eliminamos el ultimo elemento del array
+    this.length--; // Disminuimos la longitud
+    return ultimoItem;
+  }
+  //mi metodo delete =>
+  delete(index) {
+    const item = this.data[index];
+    this.shiftIndex(index);
+    return item;
+  }
+
+  // Logica que utiliza nuestro metodo delete para reducir la posicion del elemento
+  // siguiente al eliminado
+  shiftIndex(index) {
+    for (let index = 0; i < this.length - 1; i++) {
+      this.data[i] = this.data[i + 1];
+    }
+    delete this.data[this.length - 1];
+    this.length--;
+  }
 }
 
 // Instanciando nuestra clase
 const myArray = new MyArray();
 console.log(myArray); // MyArray { length: 0, data: {} }
+
+// Nuesto array posee lo siguientes metodos que podremos utilizar => delete, pop, push, get
+myArray.push;
+myArray.delete;
+myArray.get;
+myArray.pop;
