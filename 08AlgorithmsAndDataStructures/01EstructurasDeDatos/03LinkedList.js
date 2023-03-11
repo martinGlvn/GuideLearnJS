@@ -22,7 +22,7 @@ let singleList = {
 };
 
 // Estructura para crear mis linked List...
-class Nodo {
+class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
@@ -37,7 +37,26 @@ class MySingleLinkedList {
     this.tail = this.head;
     this.length = 1;
   }
-  // metodos
+  // Metodos en mi LinkedList
+
+  //Metodo append => agregar elementos al final de nuestra lista "tail or cola".
+  append(value) {
+    const newNode = new Node(value);
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
+
+    return this;
+  }
+
+  //Metodo prepend =>
+  prepend(value) {
+    const newNode = new Node(value);
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+    return this;
+  }
 }
 // Instanciado de nuestra clase
 let myLinkedList = new MySingleLinkedList(5);
