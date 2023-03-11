@@ -38,6 +38,7 @@ class HashTable {
     return undefined;
   }
 }
+
 // Instanciamos un nuevo array con la clase "hashtable"
 const myHashTable = new HashTable(50);
 console.log(myHashTable); //HashTable { data: [ <50 empty items> ] }
