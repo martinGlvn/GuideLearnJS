@@ -37,7 +37,7 @@ class MySingleLinkedList {
     this.tail = this.head;
     this.length = 1;
   }
-  // Metodos en mi LinkedList
+  // Metodos en mi LinkedList =====> ...
 
   //Metodo append => agregar elementos al final de nuestra lista "tail or cola".
   append(value) {
@@ -49,7 +49,7 @@ class MySingleLinkedList {
     return this;
   }
 
-  //Metodo prepend =>
+  //Metodo prepend => agregar elementos al principio de nuestra lista "head o cabeza".
   prepend(value) {
     const newNode = new Node(value);
     newNode.next = this.head;
