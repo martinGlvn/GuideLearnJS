@@ -18,13 +18,26 @@ const restaurant = {
     },
   },
 };
-// Desesctructuracion de Objetos =>
+// Desestructuracion de un elemento del objeto =>
+const nombreRestaurante = restaurant.name;
+console.log(nombreRestaurante);
+
+// Desesctructuracion de multiples elementos del  Objeto =>
 const { name, location, openingHours } = restaurant;
 console.log(openingHours); //thu: { open: 12, close: 22 }, fri: { open: 11, close: 23 }, sat: { open: 0, close: 24 }
 
-// Modificacion de nombre de nuestras propiedades en los objetos =>
+// Si ya existe una variable con el mismo nombre del elemento que se encuentra en el objeto
+// podemos utilizar un alias para asignar ese valor a una nueva variable =>
 const { name: localName, openingHours: openRestaurant } = restaurant;
 console.log(localName); //Food Italian
+
+// "por defecto" => En el caso de que esa propiedad del objeto que es asignada a una nueva variable
+// no exista lo que hacemos es utilizar un valor "por defecto" =>
+const { name: localName2 = "no existe" } = restaurant;
+
+// Desestructurar objetos dentro de objetos =>
+const { sat: newSat } = restaurant.openingHours;
+console.log(newSat); //{ open: 0, close: 24 }
 
 //Agregamos valores por defecto a nuestros objetos y modificamos el nombre de su propiedad.
 const { mainMenu = [], categories: specializations = [] } = restaurant;
