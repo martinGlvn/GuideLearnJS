@@ -15,3 +15,8 @@ console.log(arrayConcatenado); // [ 'pan', 'pollo', 'tomate', 'lechuga', 'mayone
 // Contenar los 2 arrays utilizando un ciclo "concat"
 const concatenacion = comidas1.concat(comidas2);
 console.log(concatenacion);
+
+const array1 = ["martin", 50];
+const array2 = ["galvan", 25];
+const array3 = array1.concat(array2);
+console.log(array3); // [ 'martin', 50, 'galvan', 25 ]

@@ -14,8 +14,6 @@ console.log(suma); //15
 //--------------------.reduce-------inicio--indice-------------------EstadoInicial
 const sumadeValores = numeros.reduce((suma, element) => suma + element, 0);
 
-// ---
-
 /* Queremos retornar cuandos elementos iguales o unicos se encuentran en  nuestro array
 Salida Esperada =
     {   
