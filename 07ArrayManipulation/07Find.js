@@ -1,8 +1,5 @@
-// Find es un metodo parecido a filter con la diferencia que este nos retornara solo un elemento
-// que cumpla con la condicion, si tendriamos un arrays con multiples elementos que cumplan la condicion
-// solo nos retornaria el primero elemento que cumplio la misma, en el caso que tuviesemos un array con
-// multiples objetos dentro nos retornaria el objeto que cumplio con la condicion, lo importante es saber que
-// find nunca nos retornara un array.
+// El metodo "find" nos devuelve el primer elemento del array que cumpla con la condicion
+// establecida =>
 
 const numeros = [2, 434, 25, 30, 9];
 
@@ -20,7 +17,7 @@ console.log(rta);
 
 // Solucion utilizando find
 const rta2 = numeros.find((numero) => numero === 30);
-console.log(rta2);
+console.log(rta2); // 30
 
 // Utilizando Find en objetos
 const autos = [
@@ -34,3 +31,13 @@ console.log(rta3); // { nombre: 'ford', color: 'gris' }
 // "findIndex" Tambien podremos obtener en que posicion se encuentra el elemento obtenido
 const rta4 = autos.findIndex((auto) => auto.color === "gris");
 console.log(rta4); // 2
+
+// ----------------------------------------
+const autos2 = [
+  { nombre: "audi", color: "rojo" },
+  { nombre: "mercedesBenz", color: "blanco" },
+  { nombre: "ford", color: "gris" },
+];
+// Destructuracion de objeto + metodo "find" =>
+const { nombre: hola } = autos2.find((auto) => auto.nombre === "audi");
+console.log(hola);

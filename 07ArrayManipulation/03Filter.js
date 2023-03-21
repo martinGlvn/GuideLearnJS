@@ -24,7 +24,7 @@ const compras = [
 
 // Filtro utilizando el metodo "filter"
 const useFilter = vehiculos.filter((vehiculo) => vehiculo.length >= 6);
-console.log(useFilter);
+console.log(useFilter); // ["camion", "camioneta"]
 
 // Filter utilizando un array de objetos
 
@@ -46,3 +46,18 @@ const busqueda = (nombre) => {
 };
 
 console.log(busqueda("Miguel"));
+
+//Objeto Usario
+const usuarios = [
+  { id: 1, name: "juan", age: 20 },
+  { id: 2, name: "elias", age: 22 },
+  { id: 3, name: "alan", age: 35 },
+];
+
+// Filtrar usuarios mayores a 30 años de edad =>
+const mayores = usuarios.filter((mayor) => mayor.age >= 30); // { id: 3, name: 'alan', age: 35 }
+console.log(mayores);
+
+// Eliminar usuarios utilizando "filter" =>
+const userFiltrado = usuarios.filter((user) => user.id !== 3);
+console.log(userFiltrado); // { id: 1, name: 'juan', age: 20 }, { id: 2, name: 'elias', age: 22 }
